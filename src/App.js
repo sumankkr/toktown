@@ -119,24 +119,24 @@ class App extends React.Component {
   <div class="wave"></div>
   <div class="wave"></div>
 </div>
-
+<span class="c-refrash-push">&nbsp;</span>
 </div>
  </button>
                     </div>
                   <div className="c-speed-headeing">
-                    <h4> Download <span>
+                    <h4> Download <dfn> Mb/s </dfn> <span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="-49 141 512 512" xmlns="https://vecta.io/nano">
                           <path d="M449.966 480.95c-7.197 0-13.034 5.835-13.034 13.034v49.804c0 28.747-23.388 52.135-52.135 52.135H29.203c-28.747 0-52.135-23.388-52.135-52.135v-49.804c0-7.2-5.835-13.034-13.034-13.034S-49 486.785-49 493.983v49.804C-49 586.908-13.918 622 29.203 622h355.594c43.12 0 78.203-35.082 78.203-78.203v-49.804c0-7.198-5.835-13.033-13.034-13.033z" />
                           <path d="M43.167 558.372h327.665c7.2 0 13.034-5.835 13.034-13.034s-5.835-13.034-13.034-13.034H43.167c-7.197 0-13.034 5.835-13.034 13.034s5.836 13.034 13.034 13.034z" fill="#ff0201" />
                           <path className="c-arow-animation" d="M93.484 297.272l100.482-89.764v252.6c0 7.2 5.837 13.034 13.034 13.034s13.034-5.835 13.034-13.034v-252.6l100.482 89.764c2.486 2.22 5.588 3.315 8.678 3.315 3.583 0 7.15-1.47 9.726-4.35a13.04 13.04 0 0 0-1.037-18.404L228.71 180.3c-12.376-11.055-31.04-11.057-43.417 0L76.117 277.83c-5.37 4.795-5.833 13.035-1.037 18.404s13.033 5.835 18.404 1.038z" />
                         </svg>
                       </span> </h4>
-                    <h1> <span id="down">0</span> <dfn> Mbps </dfn> </h1>
+                    <h1> <span id="down">0</span></h1>
                   </div>
                 </div>
                 <div className="c-latency-main">
                   <div className="c-speed-box c-upload-box">
-                    <h4> Upload <span>
+                    <h4> Upload <dfn>Mb/s</dfn> <span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="-49 141 512 512" xmlns="https://vecta.io/nano">
                           <path d="M449.966 480.95c-7.197 0-13.034 5.835-13.034 13.034v49.804c0 28.747-23.388 52.135-52.135 52.135H29.203c-28.747 0-52.135-23.388-52.135-52.135v-49.804c0-7.2-5.835-13.034-13.034-13.034S-49 486.785-49 493.983v49.804C-49 586.908-13.918 622 29.203 622h355.594c43.12 0 78.203-35.082 78.203-78.203v-49.804c0-7.198-5.835-13.033-13.034-13.033z" />
                           <path d="M43.167 558.372h327.665c7.2 0 13.034-5.835 13.034-13.034s-5.835-13.034-13.034-13.034H43.167c-7.197 0-13.034 5.835-13.034 13.034s5.836 13.034 13.034 13.034z" fill="#ff0201" />
@@ -146,7 +146,7 @@ class App extends React.Component {
                     <ul>
                       <li> 
                         {/*<h3>Speed</h3>*/}
-                        <h5><span id="up">0</span>Mbps</h5>
+                        <h5><span id="up">0</span></h5>
                       </li>
                     </ul>
                   </div>
@@ -163,15 +163,15 @@ class App extends React.Component {
                       </span> </h4>
                     <ul>
                       <li>
-                        <h3>Ping</h3>
-                        <h5><span id="ping">0</span>Ms</h5>
+                        <h3>Ping  <small>( Ms )</small></h3>
+                        <h5><span id="ping">0</span></h5>
                       </li>
                       <li>
-                        <h3>Jitter</h3>
+                        <h3>Jitter <small>( Ms )</small></h3>
                         <h5><span id="jitter">-</span></h5>
                       </li>
                       <li>
-                        <h3> Buffer Bloat</h3>
+                         <h3> Buffer <small>( Grade )</small></h3>
                         <h5><span id="grades">-</span></h5>
                       </li>
                     </ul>
@@ -194,11 +194,18 @@ class App extends React.Component {
                         <path d="m391.07 156.68c-1.86-1.86-4.44-2.93-7.07-2.93s-5.21 1.07-7.07 2.93-2.93 4.44-2.93 7.07 1.07 5.21 2.93 7.07 4.44 2.93 7.07 2.93 5.21-1.07 7.07-2.93 2.93-4.44 2.93-7.07-1.07-5.21-2.93-7.07z" />
                       </svg>
                     </span> Source </h4>
-                  <ul>
-                  <li> <dfn>Client</dfn> <div id="nearest"></div>   <div id="ip"></div>  </li>
-              <li> <dfn>Server(s)</dfn> <div id="nearest"></div></li>
-              <li> <dfn>ISP</dfn> <div id="dns"></div> </li>
-                  </ul>
+                      
+                        <h3>Client</h3>
+  <ul>
+    <li> <dfn>IP: </dfn><b id="ip"></b></li>
+    <li> <dfn>Location: </dfn> <b id="nearest"></b></li>
+  </ul>
+  <hr>
+  <h3>Server</h3>
+  <ul>
+    <li> <dfn>ISP: </dfn> <b id="dns"></b></li>
+  </ul>
+                
                 </div>
               </div>
             </div>
