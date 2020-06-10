@@ -119,7 +119,7 @@ class App extends React.Component {
   <div class="wave"></div>
   <div class="wave"></div>
 </div>
-<span class="c-refrash-push">
+
 </div>
  </button>
                     </div>
