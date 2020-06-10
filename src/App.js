@@ -200,7 +200,7 @@ class App extends React.Component {
     <li> <dfn>IP: </dfn><b id="ip"></b></li>
     <li> <dfn>Location: </dfn> <b id="nearest"></b></li>
   </ul>
-  <hr>
+  <hr/>
   <h3>Server</h3>
   <ul>
     <li> <dfn>ISP: </dfn> <b id="dns"></b></li>
