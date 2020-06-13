@@ -42,6 +42,7 @@ class App extends React.Component {
     // fired at 1hz with progress guesstimate
     o.onprogress = function(o) {
       document.getElementById('status').innerHTML = o.doing + " Progress:" + o.progress + "%";
+       document.getElementById("myBtn").style.height = o.progress +"px";
       if(o.progress===100)
       {
         var element = document.getElementById("startbutton");
@@ -115,7 +116,7 @@ class App extends React.Component {
 <svg enable-background="new 0 0 320.001 320.001" version="1.1" viewBox="0 0 320 320"  xmlns="http://www.w3.org/2000/svg">
 <path d="m295.84 146.05-256-144c-4.96-2.784-11.008-2.72-15.904 0.128-4.928 2.88-7.936 8.128-7.936 13.824v288c0 5.696 3.008 10.944 7.936 13.824 2.496 1.44 5.28 2.176 8.064 2.176 2.688 0 5.408-0.672 7.84-2.048l256-144c5.024-2.848 8.16-8.16 8.16-13.952s-3.136-11.104-8.16-13.952z"/> </svg>
 </span>
-<div class="c-wave-wr" style={{height: '50%'}}>
+<div class="c-wave-wr">
   <div class="wave"></div>
   <div class="wave"></div>
 </div>
