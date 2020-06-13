@@ -611,7 +611,9 @@ button, button:hover, button:focus {
 	animation: 1s linear infinite rotate;
 	-webkit-transform-origin: 50% 100%;
 	transform-origin: 50% 100%;
+	display: none;
 }
+.c-refrash-icon-new.active:after { display: block; }
 .rotate {
 	-webkit-animation: 1s linear infinite rotate;
 	animation: 1s linear infinite rotate;
@@ -645,25 +647,16 @@ button, button:hover, button:focus {
 	display: block;
 	position: absolute;
 	left: 0;
-	bottom: 0;
+	bottom: -8px;
 	height: 0;
 	width: 100%;
 	transition: 1s;
 	display: none;
 }
 .c-refrash-icon-new.active .c-wave-wr {
-	display: block;
-	-webkit-animation: 30s linear infinite height_increse;
-	animation: 30s linear infinite height_increse;
+	display: block;	
 }
-@keyframes height_increse {
-	from {
-		height: 0;
-	}
-	to {
-		height: 100%;
-	}
-}
+
 .c-refrash-play {
 	display: inline-block;
 }
