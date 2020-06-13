@@ -42,7 +42,7 @@ class App extends React.Component {
     // fired at 1hz with progress guesstimate
     o.onprogress = function(o) {
       document.getElementById('status').innerHTML = o.doing + " Progress:" + o.progress + "%";
-       document.getElementById("myBt").style.height = o.progress +"px";
+       document.getElementById("myBt").style.height = o.progress +"%";
       if(o.progress===100)
       {
         var element = document.getElementById("startbutton");
